@@ -10,3 +10,8 @@ body {
 .icone {
     height: 100px;
 }
+
+#quote-section {
+    background: url("img/bg-quote.jpg")center center;
+    background-size: cover;
+}
