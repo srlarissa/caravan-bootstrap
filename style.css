@@ -20,8 +20,9 @@ a {
     background-size: cover;
 }
 
-btn-socialmedia {
+.btn-socialmedia {
     max-width: 140px;
+    min-width: 80px;
 }
 
 @media (max-width: 767px){
