@@ -81,8 +81,8 @@
         </div>
         <div class="row">
           <div class="col-lg">
-            <form class="bg-light rounded p-4 box-shadow">
-              <div class="mb-3 row">
+            <form>
+              <div class="mb-3 row form-group">
                 <div class="col">
                   <label for="clienteNome" class="form-label">Nome</label>
                   <input type="text" class="form-control" id="clienteNome" placeholder="Nome completo">
@@ -92,43 +92,111 @@
                   <input type="text" class="form-control" id="clienteCPF" placeholder="xxx.xxx.xxx-xx">
                 </div>
               </div>
-              <div class="mb-3 row">
+              <div class="mb-3 row form-group">
                 <div class="col">
                   <label for="clienteEmail" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="clienteEmail" placeholder="email@email.com">
+                  <input type="email" class="form-control" id="clienteEmail" placeholder="Seu email">
                 </div>
                 <div class="col">
                   <label for="clienteSenha" class="form-label">Senha</label>
                   <input type="text" class="form-control" id="clienteSenha" placeholder="Senha de acesso">
                 </div>
               </div>
-              <div class="col">
+              <div class="col pb-3">
                 <label for="clienteEndereço" class="form-label">Endereço</label>
                 <input type="text" class="form-control" id="clienteEndereço" placeholder="Número, nome da rua e bairro"">      
               </div>
-              <div class="mb-3 row">
-                <div class="col">
+              <div class="mb-3 row form-group">
+                <div class="col-md-6">
                   <label for="clienteCidade" class="form-label">Cidade</label>
                   <input type="text" class="form-control" id="clienteCidade">
                 </div>
-                <div class="col">
-                  <label for="clienteEstado" class="form-label">Senha</label>
-                  <select class="form-select bg-light" aria-label="cidadesInput" id="cidadesInput">
-                    <option selected>Selecione a cidade</option>
+                <div class="col-md-3 col-6">
+                  <label for="clienteEstado" class="form-label">Estado</label>
+                  <select class="form-select bg-light" aria-label="clienteEstado" id="clienteEstado">
+                    <option selected>Selecione seu Estado</option>
                     <option value="1">Rio de Janeiro</option>
                     <option value="2">São Paulo</option>
                     <option value="3">Minas Gerais</option>
                   </select>                
                 </div>
-                <div class="col">
+                <div class="col-md-3 col-6">
                   <label for="clienteCEP" class="form-label">CEP</label>
                   <input type="text" class="form-control" id="clienteCEP" placeholder="xx.xxx-xxx">
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+              <div class="bg-light rounded box-shadow p-3">
+                <h2 class="h6 text-primary py-3">FORMA DE PAGAMENTO</h2>
+                <nav class="nav btn-group mb-3 col-md-6" id="formaPag" role="tablist">
+                  <button class="btn btn-secondary active btn-sm" type="button" id="navCartao" data-bs-toggle="tab" href="#nav-cartao" role="tab" aria-controls="nav-cartao" aria-selected="true">Cartão de Crédto</button>
+                  <button class="btn btn-secondary btn-sm" type="button" id="navBoleto" data-bs-toggle="tab" href="#nav-boleto" role="tab" aria-controls="nav-boleto" aria-selected="false">Boleto Bancário</button>
+                </nav> 
+                <div class="tab-content" id="formaPagConteudo">
+                  <div class="tab-pane fade show active" id="nav-cartao" role="tabpanel" aria-labelledby="navCartao">
+                    <form action="">
+                      <div class="mb-3 row form-group">
+                        <div class="col-md-6">
+                          <label for="clienteNomeCartao" class="form-label">Nome no Cartão</label>
+                          <input type="text" class="form-control" id="clienteNomeCartao" placeholder="Nome impresso no cartão">
+                        </div>
+                        <div class="col-md-3 col-6">
+                          <label for="clienteMes" class="form-label">Mês</label>
+                          <select class="form-select bg-light" aria-label="clienteMes" id="clienteMes">
+                            <option selected>Mês que o cartão expira</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Fevereiro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                          </select>                
+                        </div>
+                        <div class="col-md-3 col-6">
+                          <label for="clienteAnoCartao" class="form-label">Ano</label>
+                          <select class="form-select bg-light" aria-label="clienteAnoCartao" id="clienteAnoCartao">
+                            <option selected>Ano que o cartão expira</option>
+                            <option value="1">2023</option>
+                            <option value="2">2024</option>
+                            <option value="3">2025</option>
+                            <option value="4">2026</option>
+                            <option value="5">2027</option>
+                            <option value="6">2028</option>
+                            <option value="7">2029</option>
+                            <option value="8">2030</option>
+                            <option value="9">2031</option>
+                            <option value="10">2032</option>
+                            <option value="11">2033</option>
+                            <option value="12">2034</option>
+                          </select>                
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <label for="clienteNumCartao" class="form-label">Número do Cartão</label>
+                          <input type="text" class="form-control" id="clienteNumCartao" placeholder="5555.5555.5555.555">
+                        </div>
+                        <div class="col">
+                          <label for="clienteNumSegurancaCartao" class="form-label">Código de Segurança</label>
+                          <input type="text" class="form-control" id="clienteNumSegurancaCartao" placeholder="XXX">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane fade" id="nav-boleto" role="tabpanel" aria-labelledby="navBoleto">
+                    <p class="lead">Clique em contratar plano que nós enviaremos um boleto para seu e-mail. </p>                  
+                  </div>
+                </div>             
+              </div>
             </form>
           </div>
-          <div class="col-md"></div>
+          <div class="col-lg">
+          </div>
         </div>
       </section>
 
